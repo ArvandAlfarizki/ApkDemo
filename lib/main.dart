@@ -1,3 +1,4 @@
+import 'package:apkdemo/regis.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -62,6 +63,7 @@ class LoginPage extends StatelessWidget {
             Container(
               width: 500,
               child: TextField(
+                obscureText: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: "Enter Your Password",
@@ -116,7 +118,8 @@ class LoginPage extends StatelessWidget {
               children: [
                 Text("Already have an acount?", style: GoogleFonts.balooDa2(fontSize: 13, fontWeight: FontWeight.normal),),
                     TextButton(onPressed: (){
-                        print("test register");
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => RegisPage()),
+                        );
                     }, child: Text("Register",
                     style: GoogleFonts.balooDa2( fontSize: 13, color: Color.fromARGB(255, 121, 107, 107)
                     ),
