@@ -1,10 +1,10 @@
 import 'package:apkdemo/constans.dart';
-import 'package:apkdemo/main.dart';
-import 'regis2.dart';
+import 'regis.dart';
+import 'regis3.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class RegisPage extends StatelessWidget {
+class regis2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,12 +15,12 @@ class RegisPage extends StatelessWidget {
         children: [
               Container(
             alignment: Alignment.topRight,
-            padding: EdgeInsets.only(top: 20, right: 20),
+            padding: EdgeInsets.only(top: 5, right: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  "Identity",
+                  "Address Contact",
                   style: GoogleFonts.balooDa2(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -29,7 +29,7 @@ class RegisPage extends StatelessWidget {
                 ),
                 SizedBox(height: 5),
                 Text(
-                  "1 of 4",
+                  "2 of 4",
                   style: GoogleFonts.balooDa2(
                     fontSize: 13,
                     color: Color.fromARGB(255, 121, 107, 107),
@@ -41,7 +41,7 @@ class RegisPage extends StatelessWidget {
           Align(
             alignment: Alignment.topLeft,
             child: Padding(
-              padding: const EdgeInsets.only(top: 80.0, left: 20,),
+              padding: const EdgeInsets.only(top: 30.0, left: 20,),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
@@ -49,7 +49,7 @@ class RegisPage extends StatelessWidget {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "Member Type",
+                      "Country",
                       style: GoogleFonts.balooDa2(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -63,13 +63,13 @@ class RegisPage extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Select Member Type',
+                        hintText: 'Select Country',
                       ),
                     ),
                   ),
                   SizedBox(height: 20),
                   Text(
-                    "Email",
+                    "Province",
                     style: GoogleFonts.balooDa2(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -82,13 +82,13 @@ class RegisPage extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Enter Your Email',
+                        hintText: 'Select Province',
                       ),
                     ),
                   ),
                   SizedBox(height: 20),
                   Text(
-                    "Username",
+                    "City",
                     style: GoogleFonts.balooDa2(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -101,13 +101,13 @@ class RegisPage extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Enter Your Username',
+                        hintText: 'Select City',
                       ),
                     ),
                   ),
                   SizedBox(height: 20),
                   Text(
-                    "Password",
+                    "Branch Officers",
                     style: GoogleFonts.balooDa2(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -120,13 +120,13 @@ class RegisPage extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Enter Your Password',
+                        hintText: 'Select Branch Officers',
                       ),
                     ),
                   ),
                   SizedBox(height: 20),
                   Text(
-                    "Confirm Password",
+                    "Resindence Address",
                     style: GoogleFonts.balooDa2(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -139,13 +139,13 @@ class RegisPage extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Enter Your Confirmation Password',
+                        hintText: 'Input Your Resindence Address',
                       ),
                     ),
                   ),
                   SizedBox(height: 20),
                   Text(
-                    "Phone Number",
+                    "Job Type",
                     style: GoogleFonts.balooDa2(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -158,13 +158,13 @@ class RegisPage extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Input Your Phone Number',
+                        hintText: 'Select Job Type',
                       ),
                     ),
                   ),
                   SizedBox(height: 20),
                   Text(
-                    "Whatsapp Number",
+                    "Bussiness Field",
                     style: GoogleFonts.balooDa2(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -177,7 +177,26 @@ class RegisPage extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Input Your Whatsapp Number',
+                        hintText: 'Select Bussiness Field',
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Text(
+                    "Company Name",
+                    style: GoogleFonts.balooDa2(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Container(
+                    width: 500,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        hintText: 'Input Your Company Name',
                       ),
                     ),
                   ),
@@ -189,7 +208,7 @@ class RegisPage extends StatelessWidget {
                         onPressed: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => MyApp()),
+                            MaterialPageRoute(builder: (context) => RegisPage()),
                           );
                         }, 
                         child: Text("Back"),
@@ -204,10 +223,10 @@ class RegisPage extends StatelessWidget {
                       ),
                       SizedBox(width: 50,),
                       ElevatedButton(
-                        onPressed: () {
+                        onPressed: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => regis2()),
+                            MaterialPageRoute(builder: (context) => regis3()),
                           );
                         }, 
                         child: Text("Next"),

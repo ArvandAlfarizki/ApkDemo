@@ -1,10 +1,10 @@
 import 'package:apkdemo/constans.dart';
-import 'package:apkdemo/main.dart';
-import 'regis2.dart';
+import 'package:apkdemo/regis2.dart';
+import 'regis4.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class RegisPage extends StatelessWidget {
+class regis3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +20,7 @@ class RegisPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  "Identity",
+                  "Others Details",
                   style: GoogleFonts.balooDa2(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -29,7 +29,7 @@ class RegisPage extends StatelessWidget {
                 ),
                 SizedBox(height: 5),
                 Text(
-                  "1 of 4",
+                  "3 of 4",
                   style: GoogleFonts.balooDa2(
                     fontSize: 13,
                     color: Color.fromARGB(255, 121, 107, 107),
@@ -49,7 +49,7 @@ class RegisPage extends StatelessWidget {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "Member Type",
+                      "Piece Of Birth",
                       style: GoogleFonts.balooDa2(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -63,13 +63,13 @@ class RegisPage extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Select Member Type',
+                        hintText: 'Piece Of Birth',
                       ),
                     ),
                   ),
                   SizedBox(height: 20),
                   Text(
-                    "Email",
+                    "Date of Birth",
                     style: GoogleFonts.balooDa2(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -82,13 +82,13 @@ class RegisPage extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Enter Your Email',
+                        hintText: 'Input your Date Birth',
                       ),
                     ),
                   ),
                   SizedBox(height: 20),
                   Text(
-                    "Username",
+                    "Religion",
                     style: GoogleFonts.balooDa2(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -101,13 +101,13 @@ class RegisPage extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Enter Your Username',
+                        hintText: 'Select your Religion',
                       ),
                     ),
                   ),
                   SizedBox(height: 20),
                   Text(
-                    "Password",
+                    "Blood Type",
                     style: GoogleFonts.balooDa2(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -120,13 +120,13 @@ class RegisPage extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Enter Your Password',
+                        hintText: 'Select Blood Type',
                       ),
                     ),
                   ),
                   SizedBox(height: 20),
                   Text(
-                    "Confirm Password",
+                    "Shirt Size",
                     style: GoogleFonts.balooDa2(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -139,45 +139,7 @@ class RegisPage extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Enter Your Confirmation Password',
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Text(
-                    "Phone Number",
-                    style: GoogleFonts.balooDa2(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  Container(
-                    width: 500,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: 'Input Your Phone Number',
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Text(
-                    "Whatsapp Number",
-                    style: GoogleFonts.balooDa2(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  Container(
-                    width: 500,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: 'Input Your Whatsapp Number',
+                        hintText: 'Input Your Shirt Size',
                       ),
                     ),
                   ),
@@ -189,7 +151,7 @@ class RegisPage extends StatelessWidget {
                         onPressed: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => MyApp()),
+                            MaterialPageRoute(builder: (context) => regis2()),
                           );
                         }, 
                         child: Text("Back"),
@@ -204,10 +166,10 @@ class RegisPage extends StatelessWidget {
                       ),
                       SizedBox(width: 50,),
                       ElevatedButton(
-                        onPressed: () {
+                        onPressed: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => regis2()),
+                            MaterialPageRoute(builder: (context) => regis4()),
                           );
                         }, 
                         child: Text("Next"),
