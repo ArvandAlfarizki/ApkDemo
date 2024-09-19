@@ -58,6 +58,7 @@ class LoginPage extends StatelessWidget {
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: "Enter Email or Username",
+                  contentPadding: EdgeInsets.symmetric(vertical: 3, horizontal: 10,),
                 ),
               ),
             ),
@@ -75,6 +76,7 @@ class LoginPage extends StatelessWidget {
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: "Enter Your Password",
+                  contentPadding: EdgeInsets.symmetric(vertical: 3, horizontal: 10,),
                 ),
               ),
             ),
