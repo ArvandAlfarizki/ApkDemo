@@ -115,6 +115,7 @@ class HomeScreen extends StatelessWidget {
                     child: Container(
                       margin: EdgeInsets.only(left: 15.0, top: 10.0),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('Categorize',
                               style: GoogleFonts.balooDa2(
@@ -290,6 +291,8 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   SliverToBoxAdapter(
+                      child: Container(
+                    margin: EdgeInsets.only(top: 30.0, bottom: 20.0),
                     child: Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -302,11 +305,73 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                  ),
+                  )),
                 ],
               ),
             ),
           ],
+        ),
+      ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border(
+            top: BorderSide(
+              color: Colors.grey,
+              width: 2.0,
+            ),
+          ),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20.0),
+            topRight: Radius.circular(20.0),
+          ),
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20.0),
+            topRight: Radius.circular(20.0),
+          ),
+          child: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed, // Tambahkan ini
+            items: [
+              BottomNavigationBarItem(
+                icon: SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: Image.asset('lib/Assets/Images/icon _home_.png'),
+                ),
+                label: 'Home',
+              ),
+              BottomNavigationBarItem(
+                icon: SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: Image.asset('lib/Assets/Images/icon _feed_.png'),
+                ),
+                label: 'Feed',
+              ),
+              BottomNavigationBarItem(
+                icon: SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: Image.asset('lib/Assets/Images/icon _chat_.png'),
+                ),
+                label: 'Chat',
+              ),
+              BottomNavigationBarItem(
+                icon: SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: Image.asset('lib/Assets/Images/icon_transaction_.png'),
+                ),
+                label: 'Transaction',
+              ),
+            ],
+            selectedItemColor:
+                Color(0xFF968B8B), // Warna untuk item yang dipilih
+            unselectedItemColor:
+                Color(0xFF968B8B), // Warna untuk item yang tidak dipilih
+          ),
         ),
       ),
     );
