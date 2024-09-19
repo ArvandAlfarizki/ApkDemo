@@ -1,3 +1,4 @@
+import 'package:apkdemo/home/home.dart';
 import 'package:apkdemo/regis.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -11,7 +12,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       home: LoginPage(),
     );
@@ -23,7 +23,6 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: Container(
         alignment: Alignment.topLeft,
@@ -41,12 +40,17 @@ class LoginPage extends StatelessWidget {
                 ),
                 Text(
                   "Sign In",
-                  style: GoogleFonts.balooDa2(fontSize: 17, fontWeight: FontWeight.bold),
+                  style: GoogleFonts.balooDa2(
+                      fontSize: 17, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
             SizedBox(height: 70),
-            Text("Email or Username", style: GoogleFonts.balooDa2(fontSize: 13, fontWeight: FontWeight.bold),),
+            Text(
+              "Email or Username",
+              style: GoogleFonts.balooDa2(
+                  fontSize: 13, fontWeight: FontWeight.bold),
+            ),
             SizedBox(height: 15),
             Container(
               width: 500,
@@ -58,7 +62,11 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 40),
-            Text("Password", style: GoogleFonts.balooDa2(fontSize: 13, fontWeight: FontWeight.bold),),
+            Text(
+              "Password",
+              style: GoogleFonts.balooDa2(
+                  fontSize: 13, fontWeight: FontWeight.bold),
+            ),
             SizedBox(height: 15),
             Container(
               width: 500,
@@ -70,59 +78,92 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 60,),
-            Container(
-                width: 500,
-                child: ElevatedButton(
-                  onPressed: (){
-                      print("Test Button Login");
-                    },
-                    child: Text("Login", textAlign: TextAlign.center),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 121, 107, 107),
-                      foregroundColor: Color.fromARGB(248, 9, 9, 9),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      padding: EdgeInsets.symmetric(vertical: 15)
-                    ),
-                  ),
+            SizedBox(
+              height: 60,
             ),
-            SizedBox(height: 75,),
-            Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(onPressed: (){
-                print("text press test");
+            Container(
+              width: 500,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const HomeScreen();
+                  }));
                 },
-                  child: Text("Forgot Password", style: GoogleFonts.balooDa2(fontSize: 13, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 121, 107, 107),),
-                  ),
+                child: Text("Login", textAlign: TextAlign.center),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 121, 107, 107),
+                    foregroundColor: Color.fromARGB(248, 9, 9, 9),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    padding: EdgeInsets.symmetric(vertical: 15)),
               ),
             ),
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 75,
+            ),
+            Align(
+              alignment: Alignment.centerRight,
+              child: TextButton(
+                onPressed: () {
+                  print("text press test");
+                },
+                child: Text(
+                  "Forgot Password",
+                  style: GoogleFonts.balooDa2(
+                    fontSize: 13,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 121, 107, 107),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Expanded(child: Divider(thickness: 1,)),
-                Padding(padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Text("or",
-                style: GoogleFonts.balooDa2(fontSize: 13, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 121, 107, 107)
+                Expanded(
+                    child: Divider(
+                  thickness: 1,
+                )),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  child: Text(
+                    "or",
+                    style: GoogleFonts.balooDa2(
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 121, 107, 107)),
                   ),
-                 ),
                 ),
                 Expanded(child: Divider(thickness: 1)),
               ],
             ),
-            SizedBox(height: 40,),
+            SizedBox(
+              height: 40,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Already have an acount?", style: GoogleFonts.balooDa2(fontSize: 13, fontWeight: FontWeight.normal),),
-                    TextButton(onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => RegisPage()),
-                        );
-                    }, child: Text("Register",
-                    style: GoogleFonts.balooDa2( fontSize: 13, color: Color.fromARGB(255, 121, 107, 107)
-                    ),
+                Text(
+                  "Already have an acount?",
+                  style: GoogleFonts.balooDa2(
+                      fontSize: 13, fontWeight: FontWeight.normal),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => RegisPage()),
+                    );
+                  },
+                  child: Text(
+                    "Register",
+                    style: GoogleFonts.balooDa2(
+                        fontSize: 13,
+                        color: Color.fromARGB(255, 121, 107, 107)),
                   ),
                 ),
               ],
@@ -132,6 +173,4 @@ class LoginPage extends StatelessWidget {
       ),
     );
   }
-  
 }
-
