@@ -9,29 +9,29 @@ class regis3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Register", style: GoogleFonts.balooDa2(fontSize: 20, fontWeight: bold, color: Color.fromARGB(248, 9, 9, 9)),),
+        title: Text("Register", style: GoogleFonts.balooDa2(fontSize: 15, fontWeight: bold, color: Color.fromARGB(248, 9, 9, 9)),),
       ),
-      body: Stack(
+      body: ListView(
         children: [
               Container(
             alignment: Alignment.topRight,
-            padding: EdgeInsets.only(top: 20, right: 20),
+            padding: EdgeInsets.only(top: 1, right: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
                   "Others Details",
                   style: GoogleFonts.balooDa2(
-                    fontSize: 18,
+                    fontSize: 12,
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(248, 9, 9, 9),
                   ),
                 ),
-                SizedBox(height: 5),
+                SizedBox(height: 1),
                 Text(
                   "3 of 4",
                   style: GoogleFonts.balooDa2(
-                    fontSize: 13,
+                    fontSize: 8,
                     color: Color.fromARGB(255, 121, 107, 107),
                   ),
                 ),
@@ -41,7 +41,7 @@ class regis3 extends StatelessWidget {
           Align(
             alignment: Alignment.topLeft,
             child: Padding(
-              padding: const EdgeInsets.only(top: 80.0, left: 20,),
+              padding: const EdgeInsets.only(top: 0.10, left: 10,),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
@@ -51,95 +51,100 @@ class regis3 extends StatelessWidget {
                     child: Text(
                       "Piece Of Birth",
                       style: GoogleFonts.balooDa2(
-                        fontSize: 16,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 8),
                   Container(
-                    width: 500,
+                    width: 300,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: 'Piece Of Birth',
+                        contentPadding: EdgeInsets.symmetric(vertical: 3, horizontal: 10,),
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 8),
                   Text(
                     "Date of Birth",
                     style: GoogleFonts.balooDa2(
-                      fontSize: 16,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 8),
                   Container(
-                    width: 500,
+                    width: 300,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: 'Input your Date Birth',
+                        contentPadding: EdgeInsets.symmetric(vertical: 3, horizontal: 10,),
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 8),
                   Text(
                     "Religion",
                     style: GoogleFonts.balooDa2(
-                      fontSize: 16,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 8),
                   Container(
-                    width: 500,
+                    width: 300,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: 'Select your Religion',
+                        contentPadding: EdgeInsets.symmetric(vertical: 3, horizontal: 10,),
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 8),
                   Text(
                     "Blood Type",
                     style: GoogleFonts.balooDa2(
-                      fontSize: 16,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 8),
                   Container(
-                    width: 500,
+                    width: 300,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: 'Select Blood Type',
+                        contentPadding: EdgeInsets.symmetric(vertical: 3, horizontal: 10,),
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 8),
                   Text(
                     "Shirt Size",
                     style: GoogleFonts.balooDa2(
-                      fontSize: 16,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 8),
                   Container(
-                    width: 500,
+                    width: 300,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: 'Input Your Shirt Size',
+                        contentPadding: EdgeInsets.symmetric(vertical: 3, horizontal: 10,),
                       ),
                     ),
                   ),
@@ -158,7 +163,7 @@ class regis3 extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                         backgroundColor: Color.fromARGB(255, 228, 228, 228),
                         foregroundColor: Color.fromARGB(248, 9, 9, 9),
-                        minimumSize: Size(200, 50),
+                        minimumSize: Size(100, 40),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                           ),
@@ -176,7 +181,7 @@ class regis3 extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                         backgroundColor: Color.fromARGB(255, 121, 107, 107),
                         foregroundColor: Color.fromARGB(248, 9, 9, 9),
-                        minimumSize: Size(200, 50),
+                        minimumSize: Size(100, 40),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                           ),

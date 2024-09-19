@@ -26,7 +26,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       body: Container(
         alignment: Alignment.topLeft,
-        padding: EdgeInsets.only(top: 150.0, left: 40.0),
+        padding: EdgeInsets.only(top: 50.0, left: 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -45,15 +45,15 @@ class LoginPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 70),
+            SizedBox(height: 20),
             Text(
               "Email or Username",
               style: GoogleFonts.balooDa2(
                   fontSize: 13, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 10),
             Container(
-              width: 500,
+              width: 300,
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
@@ -61,15 +61,15 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 20),
             Text(
               "Password",
               style: GoogleFonts.balooDa2(
                   fontSize: 13, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 10),
             Container(
-              width: 500,
+              width: 300,
               child: TextField(
                 obscureText: true,
                 decoration: InputDecoration(
@@ -79,10 +79,10 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 60,
+              height: 15,
             ),
             Container(
-              width: 500,
+              width: 300,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -96,11 +96,11 @@ class LoginPage extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    padding: EdgeInsets.symmetric(vertical: 15)),
+                    padding: EdgeInsets.symmetric(vertical: 10)),
               ),
             ),
             SizedBox(
-              height: 75,
+              height: 20,
             ),
             Align(
               alignment: Alignment.centerRight,
