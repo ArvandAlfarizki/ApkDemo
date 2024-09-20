@@ -25,8 +25,14 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('lib/Assets/Images/bg_regis.jpg'), // Ganti dengan path gambar Anda
+            fit: BoxFit.cover,
+          ),
+        ),
         alignment: Alignment.topLeft,
-        padding: EdgeInsets.only(top: 50.0, left: 20.0),
+        padding: EdgeInsets.only(top: 80.0, left: 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -131,7 +137,7 @@ class LoginPage extends StatelessWidget {
                   thickness: 1,
                 )),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 20),
                   child: Text(
                     "or",
                     style: GoogleFonts.balooDa2(
@@ -144,7 +150,7 @@ class LoginPage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 40,
+              height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
