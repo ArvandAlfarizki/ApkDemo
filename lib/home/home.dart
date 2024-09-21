@@ -28,6 +28,12 @@ class HomeScreen extends StatelessWidget {
       //     title: const Text('Home Screen'),
       //   ),
       body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('lib/Assets/Images/bg_homereal.png'), // Ganti dengan path gambar Anda
+            fit: BoxFit.cover,
+          ),
+        ),
         margin: EdgeInsets.only(left: 15.0, top: 35.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
