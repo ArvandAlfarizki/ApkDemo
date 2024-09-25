@@ -4,14 +4,34 @@ import 'regis2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class RegisPage extends StatelessWidget {
+class RegisPage extends StatefulWidget {
+  @override
+  _RegisPageState createState() => _RegisPageState();
+}
+
+class _RegisPageState extends State<RegisPage> {
+  String selectedMemberType = 'Anggota';
   @override
   Widget build(BuildContext context) {
+    List<String> memberTypes = ['Pengurus Pusat','Ketua Capter','Pengurus Capter','Anggota','Pramember'];
+
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text("Register", style: GoogleFonts.balooDa2(fontSize: 15, fontWeight: bold, color: Color.fromARGB(248, 9, 9, 9)),),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Text("Register", style: GoogleFonts.balooDa2(fontSize: 15, fontWeight: bold, color: Color.fromARGB(248, 255, 255, 255)),),
       ),
-      body: ListView(
+      body: 
+      Stack(
+      children: [
+        Positioned.fill(
+          child: Image.asset(
+            'lib/Assets/Images/realbg_regis.png',
+            fit: BoxFit.cover,
+          ),
+        ),
+      ListView(
         children: [
               Container(
             alignment: Alignment.topRight,
@@ -24,7 +44,7 @@ class RegisPage extends StatelessWidget {
                   style: GoogleFonts.balooDa2(
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(248, 9, 9, 9),
+                    color: Color.fromARGB(248, 255, 255, 255),
                   ),
                 ),
                 SizedBox(height: 1),
@@ -32,7 +52,7 @@ class RegisPage extends StatelessWidget {
                   "1 of 4",
                   style: GoogleFonts.balooDa2(
                     fontSize: 8,
-                    color: Color.fromARGB(255, 121, 107, 107),
+                    color: Color.fromARGB(255, 168, 165, 165),
                   ),
                 ),
               ],
@@ -53,28 +73,45 @@ class RegisPage extends StatelessWidget {
                       style: GoogleFonts.balooDa2(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                        color: const Color.fromARGB(255, 255, 255, 255),
                       ),
                     ),
                   ),
                   SizedBox(height: 8),
                   Container(
                     width: 300,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: 'Select Member Type',
-                        contentPadding: EdgeInsets.symmetric(vertical: 3, horizontal: 10,),
+                    child: DropdownButton<String>(
+                        value: selectedMemberType,
+                        isExpanded: true,
+                        onChanged: (String? newValue) {
+                          if (newValue != null){
+                              setState(() {
+                              selectedMemberType = newValue;
+                            });
+                          }
+                        },
+                        items: memberTypes
+                            .map<DropdownMenuItem<String>>((String value) {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(value),
+                          );
+                        }).toList(),
+                        underline: Container(
+                          height: 1,
+                          color: Colors.grey,
+                        ),
+                        style: TextStyle(color: const Color.fromARGB(255, 56, 56, 56), fontSize: 14),
+                        icon: Icon(Icons.arrow_drop_down),
                       ),
                     ),
-                  ),
                   SizedBox(height: 8),
                   Text(
                     "Email",
                     style: GoogleFonts.balooDa2(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: const Color.fromARGB(255, 255, 255, 255),
                     ),
                   ),
                   SizedBox(height: 8),
@@ -94,7 +131,7 @@ class RegisPage extends StatelessWidget {
                     style: GoogleFonts.balooDa2(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: const Color.fromARGB(255, 255, 255, 255),
                     ),
                   ),
                   SizedBox(height: 8),
@@ -114,7 +151,7 @@ class RegisPage extends StatelessWidget {
                     style: GoogleFonts.balooDa2(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: const Color.fromARGB(255, 255, 255, 255),
                     ),
                   ),
                   SizedBox(height: 8),
@@ -134,7 +171,7 @@ class RegisPage extends StatelessWidget {
                     style: GoogleFonts.balooDa2(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: const Color.fromARGB(255, 255, 255, 255),
                     ),
                   ),
                   SizedBox(height: 8),
@@ -154,7 +191,7 @@ class RegisPage extends StatelessWidget {
                     style: GoogleFonts.balooDa2(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: const Color.fromARGB(255, 255, 255, 255),
                     ),
                   ),
                   SizedBox(height: 8),
@@ -174,7 +211,7 @@ class RegisPage extends StatelessWidget {
                     style: GoogleFonts.balooDa2(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: const Color.fromARGB(255, 255, 255, 255),
                     ),
                   ),
                   SizedBox(height: 8),
@@ -219,7 +256,7 @@ class RegisPage extends StatelessWidget {
                         }, 
                         child: Text("Next"),
                         style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 121, 107, 107),
+                        backgroundColor: Color.fromARGB(123, 123, 111, 111),
                         foregroundColor: Color.fromARGB(248, 9, 9, 9),
                         minimumSize: Size(100, 40),
                         shape: RoundedRectangleBorder(
@@ -234,6 +271,8 @@ class RegisPage extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      ],
       ),
     );
   }
