@@ -1,25 +1,63 @@
-import 'package:apkdemo/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:apkdemo/profile/profile.dart';
+import 'package:apkdemo/src/layouts/nav-bar.dart';
+import 'package:apkdemo/feed/feed.dart';
+import 'package:apkdemo/chat/chat.dart';
+import 'package:apkdemo/transaction/transaction.dart';
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(1080, 1920), // Resolusi tetap yang diinginkan
+      designSize: const Size(1080, 1920),
       minTextAdapt: true,
       builder: (context, child) {
         return MaterialApp(
-          home: HomeScreen(),
+          home: HomePage(),
         );
       },
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  @override
+  HomeScreen createState() => HomeScreen();
+}
+
+class HomeScreen extends State<HomePage> {
+  int _currentIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+    // Navigasi ke halaman yang sesuai
+    if (index == 0) {
+      // Navigasi ke Menu
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => HomePage()),
+      );
+    } else if (index == 1) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => FeedPage()),
+      );
+    } else if (index == 2) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => ChatPage()),
+      );
+    } else if (index == 3) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => TransactionPage()),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,11 +68,11 @@ class HomeScreen extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('lib/Assets/Images/bg_homereal.png'), // Ganti dengan path gambar Anda
+            image: AssetImage('lib/Assets/Images/bg_login.png'),
             fit: BoxFit.cover,
           ),
         ),
-        margin: EdgeInsets.only(left: 15.0, top: 35.0),
+        padding: EdgeInsets.only(left: 15.0, top: 35.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -277,10 +315,11 @@ class HomeScreen extends StatelessWidget {
                                 children: [
                                   ElevatedButton(
                                     onPressed: () {
-                                      Navigator.push(context,
-                                          MaterialPageRoute(builder: (context) {
-                                        return const HomeScreen();
-                                      }));
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  HomePage()));
                                     },
                                     child: Text('See All  >',
                                         style:
@@ -318,67 +357,9 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          border: Border(
-            top: BorderSide(
-              color: Colors.grey,
-              width: 2.0,
-            ),
-          ),
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20.0),
-            topRight: Radius.circular(20.0),
-          ),
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20.0),
-            topRight: Radius.circular(20.0),
-          ),
-          child: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed, // Tambahkan ini
-            items: [
-              BottomNavigationBarItem(
-                icon: SizedBox(
-                  width: 24,
-                  height: 24,
-                  child: Image.asset('lib/Assets/Images/icon _home_.png'),
-                ),
-                label: 'Home',
-              ),
-              BottomNavigationBarItem(
-                icon: SizedBox(
-                  width: 24,
-                  height: 24,
-                  child: Image.asset('lib/Assets/Images/icon _feed_.png'),
-                ),
-                label: 'Feed',
-              ),
-              BottomNavigationBarItem(
-                icon: SizedBox(
-                  width: 24,
-                  height: 24,
-                  child: Image.asset('lib/Assets/Images/icon _chat_.png'),
-                ),
-                label: 'Chat',
-              ),
-              BottomNavigationBarItem(
-                icon: SizedBox(
-                  width: 24,
-                  height: 24,
-                  child: Image.asset('lib/Assets/Images/icon_transaction_.png'),
-                ),
-                label: 'Transaction',
-              ),
-            ],
-            selectedItemColor:
-                Color(0xFF968B8B), // Warna untuk item yang dipilih
-            unselectedItemColor:
-                Color(0xFF968B8B), // Warna untuk item yang tidak dipilih
-          ),
-        ),
+      bottomNavigationBar: NavBarNew(
+        currentIndex: _currentIndex,
+        onTap: _onItemTapped,
       ),
     );
   }

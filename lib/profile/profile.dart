@@ -22,9 +22,7 @@ class ProfileScreen extends StatelessWidget {
                   icon: Icon(Icons.arrow_back),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return const HomeScreen();
-                    }));
+                        MaterialPageRoute(builder: (context) => HomePage()));
                   },
                 ),
               ],

@@ -2,7 +2,7 @@ import 'package:apkdemo/home/home.dart';
 import 'package:apkdemo/regis.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+// import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -13,8 +13,7 @@ class LoginPage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(
-                'lib/Assets/Images/bg_login.png'),
+            image: AssetImage('lib/Assets/Images/bg_login.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -34,9 +33,10 @@ class LoginPage extends StatelessWidget {
                 Text(
                   "Sign In",
                   style: GoogleFonts.balooDa2(
-                      fontSize: 17, fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(248, 253, 253, 253),
-                      ),
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(248, 253, 253, 253),
+                  ),
                 ),
               ],
             ),
@@ -44,9 +44,10 @@ class LoginPage extends StatelessWidget {
             Text(
               "Email or Username",
               style: GoogleFonts.balooDa2(
-                  fontSize: 13, fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(248, 253, 253, 253),
-                  ),
+                fontSize: 13,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(248, 253, 253, 253),
+              ),
             ),
             SizedBox(height: 10),
             Container(
@@ -68,9 +69,10 @@ class LoginPage extends StatelessWidget {
             Text(
               "Password",
               style: GoogleFonts.balooDa2(
-                  fontSize: 13, fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(248, 253, 253, 253),
-                  ),
+                fontSize: 13,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(248, 253, 253, 253),
+              ),
             ),
             SizedBox(height: 10),
             Container(
@@ -96,9 +98,8 @@ class LoginPage extends StatelessWidget {
               width: 300,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return const HomeScreen();
-                  }));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
                 },
                 child: Text("Login", textAlign: TextAlign.center),
                 style: ElevatedButton.styleFrom(
@@ -161,9 +162,10 @@ class LoginPage extends StatelessWidget {
                 Text(
                   "Already have an acount?",
                   style: GoogleFonts.balooDa2(
-                      fontSize: 13, fontWeight: FontWeight.normal,
-                      color: Color.fromARGB(248, 253, 253, 253),
-                      ),
+                    fontSize: 13,
+                    fontWeight: FontWeight.normal,
+                    color: Color.fromARGB(248, 253, 253, 253),
+                  ),
                 ),
                 TextButton(
                   onPressed: () {
@@ -175,8 +177,7 @@ class LoginPage extends StatelessWidget {
                   child: Text(
                     "Register",
                     style: GoogleFonts.balooDa2(
-                        fontSize: 13,
-                        color: Color.fromARGB(255, 255, 0, 0)),
+                        fontSize: 13, color: Color.fromARGB(255, 255, 0, 0)),
                   ),
                 ),
               ],
