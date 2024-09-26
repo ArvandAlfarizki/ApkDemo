@@ -46,6 +46,7 @@ class TransactionScreen extends State<TransactionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(238, 0, 0, 0),
       body: Center(
           child: Text("Transaction", style: TextStyle(color: Colors.white))),
       bottomNavigationBar: NavBarNew(

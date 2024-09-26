@@ -46,7 +46,14 @@ class FeedScreen extends State<FeedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("Feed", style: TextStyle(color: Colors.white))),
+      backgroundColor: const Color.fromARGB(238, 0, 0, 0),
+      body: Center(
+        child: Image.asset(
+          'lib/Assets/Images/under_develop.png',
+          width: 370,
+          height: 220,
+        ),
+      ),
       bottomNavigationBar: NavBarNew(
         currentIndex: _currentIndex,
         onTap: _onItemTapped,
