@@ -4,14 +4,35 @@ import 'regis4.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class regis3 extends StatelessWidget {
+class Regis3Page extends StatefulWidget {
+  @override
+  _Regis3PageState createState() => _Regis3PageState();
+}
+
+class _Regis3PageState extends State<Regis3Page> {
+  String selectedReligion = 'Select Your Religion';
+  String selectedBlood = 'Select Your Blood Type';
   @override
   Widget build(BuildContext context) {
+    List<String> religion = ['Select Your Religion','Islam','Kristen','Kristen Katolik','Hindu', 'Budha', 'Khonghucu'];
+    List<String> blood = ['Select Your Blood Type','A','AB','B','O', 'A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'];
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text("Register", style: GoogleFonts.balooDa2(fontSize: 15, fontWeight: bold, color: Color.fromARGB(248, 9, 9, 9)),),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Text("Register", style: GoogleFonts.balooDa2(fontSize: 15, fontWeight: bold, color: Color.fromARGB(248, 255, 255, 255)),),
       ),
-      body: ListView(
+      body: 
+      Stack(
+      children: [
+        Positioned.fill(
+          child: Image.asset(
+            'lib/Assets/Images/realbg_regis.png',
+            fit: BoxFit.cover,
+          ),
+        ),
+      ListView(
         children: [
               Container(
             alignment: Alignment.topRight,
@@ -24,7 +45,7 @@ class regis3 extends StatelessWidget {
                   style: GoogleFonts.balooDa2(
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(248, 9, 9, 9),
+                    color: Color.fromARGB(248, 255, 255, 255),
                   ),
                 ),
                 SizedBox(height: 1),
@@ -53,7 +74,7 @@ class regis3 extends StatelessWidget {
                       style: GoogleFonts.balooDa2(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                        color: Color.fromARGB(248, 255, 255, 255),
                       ),
                     ),
                   ),
@@ -74,7 +95,7 @@ class regis3 extends StatelessWidget {
                     style: GoogleFonts.balooDa2(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Color.fromARGB(248, 255, 255, 255),
                     ),
                   ),
                   SizedBox(height: 8),
@@ -94,47 +115,81 @@ class regis3 extends StatelessWidget {
                     style: GoogleFonts.balooDa2(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Color.fromARGB(248, 255, 255, 255),
                     ),
                   ),
                   SizedBox(height: 8),
                   Container(
                     width: 300,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: 'Select your Religion',
-                        contentPadding: EdgeInsets.symmetric(vertical: 3, horizontal: 10,),
+                    child: DropdownButton<String>(
+                        value: selectedReligion,
+                        isExpanded: true,
+                        onChanged: (String? newValue) {
+                          if (newValue != null){
+                              setState(() {
+                              selectedReligion = newValue;
+                            });
+                          }
+                        },
+                        items: religion
+                            .map<DropdownMenuItem<String>>((String value) {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(value),
+                          );
+                        }).toList(),
+                        underline: Container(
+                          height: 1,
+                          color: Colors.grey,
+                        ),
+                        style: TextStyle(color: const Color.fromARGB(255, 56, 56, 56), fontSize: 14),
+                        icon: Icon(Icons.arrow_drop_down),
                       ),
                     ),
-                  ),
                   SizedBox(height: 8),
                   Text(
                     "Blood Type",
                     style: GoogleFonts.balooDa2(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Color.fromARGB(248, 255, 255, 255),
                     ),
                   ),
                   SizedBox(height: 8),
                   Container(
                     width: 300,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: 'Select Blood Type',
-                        contentPadding: EdgeInsets.symmetric(vertical: 3, horizontal: 10,),
+                    child: DropdownButton<String>(
+                        value: selectedBlood,
+                        isExpanded: true,
+                        onChanged: (String? newValue) {
+                          if (newValue != null){
+                              setState(() {
+                              selectedBlood = newValue;
+                            });
+                          }
+                        },
+                        items: blood
+                            .map<DropdownMenuItem<String>>((String value) {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(value),
+                          );
+                        }).toList(),
+                        underline: Container(
+                          height: 1,
+                          color: Colors.grey,
+                        ),
+                        style: TextStyle(color: const Color.fromARGB(255, 56, 56, 56), fontSize: 14),
+                        icon: Icon(Icons.arrow_drop_down),
                       ),
                     ),
-                  ),
                   SizedBox(height: 8),
                   Text(
                     "Shirt Size",
                     style: GoogleFonts.balooDa2(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Color.fromARGB(248, 255, 255, 255),
                     ),
                   ),
                   SizedBox(height: 8),
@@ -156,7 +211,7 @@ class regis3 extends StatelessWidget {
                         onPressed: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => regis2()),
+                            MaterialPageRoute(builder: (context) => Regis2Page()),
                           );
                         }, 
                         child: Text("Back"),
@@ -179,7 +234,7 @@ class regis3 extends StatelessWidget {
                         }, 
                         child: Text("Next"),
                         style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 121, 107, 107),
+                        backgroundColor: Color.fromARGB(123, 123, 111, 111),
                         foregroundColor: Color.fromARGB(248, 9, 9, 9),
                         minimumSize: Size(100, 40),
                         shape: RoundedRectangleBorder(
@@ -194,6 +249,8 @@ class regis3 extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      ],
       ),
     );
   }

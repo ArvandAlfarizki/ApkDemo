@@ -251,7 +251,7 @@ class _RegisPageState extends State<RegisPage> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => regis2()),
+                            MaterialPageRoute(builder: (context) => Regis2Page()),
                           );
                         }, 
                         child: Text("Next"),

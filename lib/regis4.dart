@@ -7,15 +7,27 @@ class regis4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text("Register", style: GoogleFonts.balooDa2(fontSize: 15, fontWeight: bold, color: Color.fromARGB(248, 9, 9, 9)),),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Text("Register", style: GoogleFonts.balooDa2(fontSize: 15, fontWeight: bold, color: Color.fromARGB(248, 255, 255, 255)),),
       ),
-      body: ListView(
+      body: 
+      Stack(
+      children: [
+        Positioned.fill(
+          child: Image.asset(
+            'lib/Assets/Images/realbg_regis.png',
+            fit: BoxFit.cover,
+          ),
+        ),
+      ListView(
         padding: EdgeInsets.all(10),
         children: [
               Container(
             alignment: Alignment.topRight,
-            padding: EdgeInsets.only(top: 1, right: 20),
+            padding: EdgeInsets.only(top: 70, right: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
@@ -24,7 +36,7 @@ class regis4 extends StatelessWidget {
                   style: GoogleFonts.balooDa2(
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(248, 9, 9, 9),
+                    color: Color.fromARGB(248, 255, 255, 255),
                   ),
                 ),
                 SizedBox(height: 1),
@@ -38,7 +50,7 @@ class regis4 extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 5),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -51,7 +63,7 @@ class regis4 extends StatelessWidget {
                       style: GoogleFonts.balooDa2(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                        color: Color.fromARGB(248, 255, 255, 255),
                       ),
                     ),
                     SizedBox(height: 10),
@@ -66,7 +78,7 @@ class regis4 extends StatelessWidget {
                         ),
                         borderRadius: BorderRadius.circular(15),
                         image: DecorationImage(
-                          image: AssetImage('lib/Assets/Images/Member_Card.png'),
+                          image: AssetImage('lib/Assets/Images/kta.png'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -81,8 +93,8 @@ class regis4 extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        backgroundColor: Color.fromARGB(255, 121, 107, 107),
-                        foregroundColor: Colors.white,
+                        backgroundColor: Color.fromARGB(248, 255, 255, 255),
+                        foregroundColor: const Color.fromARGB(255, 94, 93, 93),
                         padding: EdgeInsets.symmetric(vertical: 10, horizontal: 55)
                       ),
                     ),
@@ -98,7 +110,7 @@ class regis4 extends StatelessWidget {
                       style: GoogleFonts.balooDa2(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                        color: Color.fromARGB(248, 255, 255, 255),
                       ),
                     ),
                     SizedBox(height: 10),
@@ -112,7 +124,7 @@ class regis4 extends StatelessWidget {
                         ),
                         borderRadius: BorderRadius.circular(15),
                         image: DecorationImage(
-                          image: AssetImage('lib/Assets/Images/Member_Card.png'),
+                          image: AssetImage('lib/Assets/Images/kta.png'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -128,8 +140,8 @@ class regis4 extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        backgroundColor: Color.fromARGB(255, 121, 107, 107),
-                        foregroundColor: Colors.white,
+                        backgroundColor: Color.fromARGB(248, 255, 255, 255),
+                        foregroundColor: const Color.fromARGB(255, 94, 93, 93),
                       ),
                     ),
                   ],
@@ -147,7 +159,7 @@ class regis4 extends StatelessWidget {
                       style: GoogleFonts.balooDa2(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                        color: Color.fromARGB(248, 255, 255, 255),
                       ),
                     ),
                     SizedBox(height: 10),
@@ -161,7 +173,7 @@ class regis4 extends StatelessWidget {
                         ),
                         borderRadius: BorderRadius.circular(15),
                         image: DecorationImage(
-                          image: AssetImage('lib/Assets/Images/Member_Card.png'),
+                          image: AssetImage('lib/Assets/Images/kta.png'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -177,8 +189,8 @@ class regis4 extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        backgroundColor: Color.fromARGB(255, 121, 107, 107),
-                        foregroundColor: Colors.white,
+                        backgroundColor: Color.fromARGB(248, 255, 255, 255),
+                        foregroundColor: const Color.fromARGB(255, 94, 93, 93),
                       ),
                     ),
                   ],
@@ -190,7 +202,7 @@ class regis4 extends StatelessWidget {
                     style: GoogleFonts.balooDa2(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Color.fromARGB(248, 255, 255, 255),
                     ),
                   ),
                   SizedBox(height: 8),
@@ -210,7 +222,7 @@ class regis4 extends StatelessWidget {
                     style: GoogleFonts.balooDa2(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Color.fromARGB(248, 255, 255, 255),
                     ),
                   ),
                   SizedBox(height: 8),
@@ -232,7 +244,7 @@ class regis4 extends StatelessWidget {
                         onPressed: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => regis3()),
+                            MaterialPageRoute(builder: (context) => Regis3Page()),
                           );
                         }, 
                         child: Text("Back"),
@@ -255,7 +267,7 @@ class regis4 extends StatelessWidget {
                         }, 
                         child: Text("Finish"),
                         style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 121, 107, 107),
+                        backgroundColor: Color.fromARGB(123, 123, 111, 111),
                         foregroundColor: Color.fromARGB(248, 9, 9, 9),
                         minimumSize: Size(100, 40),
                         shape: RoundedRectangleBorder(
@@ -266,6 +278,8 @@ class regis4 extends StatelessWidget {
                     ],
                   ),
         ],
+      ),
+      ],
       ),
     );
   }
