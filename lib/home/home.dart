@@ -34,9 +34,8 @@ class HomeScreen extends State<HomePage> {
     setState(() {
       _currentIndex = index;
     });
-    // Navigasi ke halaman yang sesuai
+
     if (index == 0) {
-      // Navigasi ke Menu
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => HomePage()),
@@ -77,7 +76,7 @@ class HomeScreen extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.only(left: 15.0, top: 35.0),
+              padding: EdgeInsets.only(left: 15.0, top: 34.0),
               child: Row(
                 children: [
                   IconButton(

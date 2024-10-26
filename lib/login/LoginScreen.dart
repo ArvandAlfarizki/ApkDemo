@@ -24,12 +24,6 @@ class LoginPage extends StatelessWidget {
           children: [
             Row(
               children: [
-                IconButton(
-                  icon: Icon(Icons.arrow_back),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
                 Text(
                   "Sign In",
                   style: GoogleFonts.balooDa2(
