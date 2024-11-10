@@ -81,6 +81,7 @@ class HomeScreen extends State<HomePage> {
                 children: [
                   IconButton(
                     icon: Icon(Icons.menu),
+                    iconSize: 35,
                     color: Colors.white,
                     onPressed: () {
                       Navigator.push(context,
@@ -95,12 +96,12 @@ class HomeScreen extends State<HomePage> {
                       Text(
                         'Current Location',
                         style: GoogleFonts.balooDa2(
-                            fontSize: 7, color: Colors.white),
+                            fontSize: 12, color: Colors.white),
                       ),
                       Text(
                         'Bandung',
                         style: GoogleFonts.balooDa2(
-                            fontSize: 10,
+                            fontSize: 15,
                             fontWeight: FontWeight.bold,
                             color: Colors.white),
                       ),
@@ -121,7 +122,7 @@ class HomeScreen extends State<HomePage> {
                         children: [
                           Text('Organized',
                               style: GoogleFonts.balooDa2(
-                                  fontSize: 12,
+                                  fontSize: 17,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white)),
                         ],
@@ -139,11 +140,11 @@ class HomeScreen extends State<HomePage> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Image.asset('lib/Assets/Images/News_w.png',
-                                      width: 40, height: 40),
+                                      width: 55, height: 55),
                                   SizedBox(height: 5),
                                   Text('News',
                                       style: GoogleFonts.balooDa2(
-                                          fontSize: 10, color: Colors.white))
+                                          fontSize: 15, color: Colors.white))
                                 ],
                               ),
                               SizedBox(width: 15),
@@ -151,11 +152,11 @@ class HomeScreen extends State<HomePage> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Image.asset('lib/Assets/Images/Event_w.png',
-                                        width: 40, height: 40),
+                                        width: 55, height: 55),
                                     SizedBox(height: 5),
                                     Text('Event',
                                         style: GoogleFonts.balooDa2(
-                                            fontSize: 10, color: Colors.white))
+                                            fontSize: 15, color: Colors.white))
                                   ])
                             ],
                           )
@@ -171,7 +172,7 @@ class HomeScreen extends State<HomePage> {
                         children: [
                           Text('Categorize',
                               style: GoogleFonts.balooDa2(
-                                  fontSize: 12,
+                                  fontSize: 17,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white)),
                         ],
@@ -189,11 +190,11 @@ class HomeScreen extends State<HomePage> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Image.asset('lib/Assets/Images/Apparel.png',
-                                      width: 40, height: 40),
+                                      width: 55, height: 55),
                                   SizedBox(height: 5),
                                   Text('Apparel',
                                       style: GoogleFonts.balooDa2(
-                                          fontSize: 10, color: Colors.white))
+                                          fontSize: 15, color: Colors.white))
                                 ],
                               ),
                               SizedBox(width: 15),
@@ -202,12 +203,12 @@ class HomeScreen extends State<HomePage> {
                                   children: [
                                     Image.asset(
                                         'lib/Assets/Images/Otomotif_w.png',
-                                        width: 40,
-                                        height: 40),
+                                        width: 55,
+                                        height: 55),
                                     SizedBox(height: 5),
                                     Text('Otomotif',
                                         style: GoogleFonts.balooDa2(
-                                            fontSize: 10, color: Colors.white))
+                                            fontSize: 15, color: Colors.white))
                                   ]),
                               SizedBox(width: 15),
                               Column(
@@ -215,12 +216,12 @@ class HomeScreen extends State<HomePage> {
                                   children: [
                                     Image.asset(
                                         'lib/Assets/Images/Service_w.png',
-                                        width: 40,
-                                        height: 40),
+                                        width: 55,
+                                        height: 55),
                                     SizedBox(height: 5),
                                     Text('Service',
                                         style: GoogleFonts.balooDa2(
-                                            fontSize: 10, color: Colors.white))
+                                            fontSize: 15, color: Colors.white))
                                   ]),
                               SizedBox(width: 15),
                               Column(
@@ -228,12 +229,12 @@ class HomeScreen extends State<HomePage> {
                                   children: [
                                     Image.asset(
                                         'lib/Assets/Images/Trains_w.png',
-                                        width: 40,
-                                        height: 40),
+                                        width: 55,
+                                        height: 55),
                                     SizedBox(height: 5),
                                     Text('Trains',
                                         style: GoogleFonts.balooDa2(
-                                            fontSize: 10, color: Colors.white))
+                                            fontSize: 15, color: Colors.white))
                                   ]),
                               SizedBox(width: 15),
                               Column(
@@ -241,25 +242,13 @@ class HomeScreen extends State<HomePage> {
                                   children: [
                                     Image.asset(
                                         'lib/Assets/Images/Flights_w.png',
-                                        width: 40,
-                                        height: 40),
+                                        width: 55,
+                                        height: 55),
                                     SizedBox(height: 5),
                                     Text('Flights',
                                         style: GoogleFonts.balooDa2(
-                                            fontSize: 10, color: Colors.white))
+                                            fontSize: 15, color: Colors.white))
                                   ]),
-                              SizedBox(width: 15),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset('lib/Assets/Images/Hotel_w.png',
-                                      width: 40, height: 40),
-                                  SizedBox(height: 5),
-                                  Text('Hotel',
-                                      style: GoogleFonts.balooDa2(
-                                          fontSize: 10, color: Colors.white))
-                                ],
-                              ),
                             ],
                           )
                         ],
@@ -277,11 +266,11 @@ class HomeScreen extends State<HomePage> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Image.asset('lib/Assets/Images/Villa_w.png',
-                                        width: 40, height: 40),
+                                        width: 55, height: 55),
                                     SizedBox(height: 5),
                                     Text('Villa',
                                         style: GoogleFonts.balooDa2(
-                                            fontSize: 10, color: Colors.white))
+                                            fontSize: 15, color: Colors.white))
                                   ]),
                               SizedBox(width: 15),
                               Column(
@@ -289,23 +278,35 @@ class HomeScreen extends State<HomePage> {
                                   children: [
                                     Image.asset(
                                         'lib/Assets/Images/Resort_w.png',
-                                        width: 40,
-                                        height: 40),
+                                        width: 55,
+                                        height: 55),
                                     SizedBox(height: 5),
                                     Text('Resort',
                                         style: GoogleFonts.balooDa2(
-                                            fontSize: 10, color: Colors.white))
+                                            fontSize: 15, color: Colors.white))
                                   ]),
+                              SizedBox(width: 15),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset('lib/Assets/Images/Hotel_w.png',
+                                      width: 55, height: 55),
+                                  SizedBox(height: 5),
+                                  Text('Hotel',
+                                      style: GoogleFonts.balooDa2(
+                                          fontSize: 15, color: Colors.white))
+                                ],
+                              ),
                               SizedBox(width: 15),
                               Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Image.asset('lib/Assets/Images/More_w.png',
-                                        width: 40, height: 40),
+                                        width: 55, height: 55),
                                     SizedBox(height: 5),
                                     Text('More',
                                         style: GoogleFonts.balooDa2(
-                                            fontSize: 10, color: Colors.white))
+                                            fontSize: 15, color: Colors.white))
                                   ])
                             ],
                           )
@@ -325,11 +326,11 @@ class HomeScreen extends State<HomePage> {
                                   children: [
                                     Text('Hot News',
                                         style: GoogleFonts.balooDa2(
-                                            fontSize: 12,
+                                            fontSize: 17,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white)),
                                   ]),
-                              SizedBox(width: 155),
+                              SizedBox(width: 190),
                               Column(
                                 children: [
                                   ElevatedButton(
@@ -342,9 +343,9 @@ class HomeScreen extends State<HomePage> {
                                     },
                                     child: Text('See All  >',
                                         style:
-                                            GoogleFonts.balooDa2(fontSize: 13)),
+                                            GoogleFonts.balooDa2(fontSize: 15)),
                                     style: ElevatedButton.styleFrom(
-                                      minimumSize: Size(30, 20),
+                                      minimumSize: Size(50, 40),
                                       backgroundColor:
                                           Color.fromARGB(108, 107, 107, 100),
                                       foregroundColor:
@@ -368,8 +369,8 @@ class HomeScreen extends State<HomePage> {
                         children: [
                           Image.asset(
                             'lib/Assets/Images/news (3).png',
-                            width: 270,
-                            height: 120,
+                            width: 300,
+                            height: 150,
                           ),
                         ],
                       ),

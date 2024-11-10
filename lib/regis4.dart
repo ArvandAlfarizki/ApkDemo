@@ -7,19 +7,19 @@ class regis4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: Text(
-          "Register",
-          style: GoogleFonts.balooDa2(
-              fontSize: 15,
-              fontWeight: bold,
-              color: Color.fromARGB(248, 255, 255, 255)),
-        ),
-        iconTheme: IconThemeData(color: Colors.white),
-      ),
+      // extendBodyBehindAppBar: true,
+      // appBar: AppBar(
+      //   backgroundColor: Colors.transparent,
+      //   elevation: 0,
+      //   title: Text(
+      //     "Register",
+      //     style: GoogleFonts.balooDa2(
+      //         fontSize: 15,
+      //         fontWeight: bold,
+      //         color: Color.fromARGB(248, 255, 255, 255)),
+      //   ),
+      //   iconTheme: IconThemeData(color: Colors.white),
+      // ),
       body: Stack(
         children: [
           Positioned.fill(
@@ -31,6 +31,22 @@ class regis4 extends StatelessWidget {
           ListView(
             padding: EdgeInsets.all(10),
             children: [
+              Container(
+                alignment: Alignment.topLeft,
+                padding: EdgeInsets.only(top: 80.0, left: 25.0),
+                child: Row(
+                  children: [
+                    Text(
+                      "Register",
+                      style: GoogleFonts.balooDa2(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(248, 253, 253, 253),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               Container(
                 alignment: Alignment.topRight,
                 padding: EdgeInsets.only(top: 70, right: 20),
@@ -57,64 +73,135 @@ class regis4 extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 5),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Id Card Photo",
-                          style: GoogleFonts.balooDa2(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(248, 255, 255, 255),
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        Container(
-                          width: double.infinity,
-                          height: 95,
-                          margin: EdgeInsets.only(right: 10),
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Color.fromARGB(255, 13, 14, 14),
-                              width: 4,
-                            ),
-                            borderRadius: BorderRadius.circular(15),
-                            image: DecorationImage(
-                              image: AssetImage('lib/Assets/Images/kta.png'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        ElevatedButton(
-                          onPressed: () {
-                            print("Button 1 Upload");
-                          },
-                          child: Text("Upload"),
-                          style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              backgroundColor:
-                                  Color.fromARGB(248, 255, 255, 255),
-                              foregroundColor:
-                                  const Color.fromARGB(255, 94, 93, 93),
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 10, horizontal: 55)),
-                        ),
-                      ],
-                    ),
+              Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 0.10,
+                    left: 25,
+                    right: 25,
                   ),
-                  Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Id Card Photo",
+                              style: GoogleFonts.balooDa2(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(248, 255, 255, 255),
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Container(
+                              width: 200,
+                              height: 95,
+                              margin: EdgeInsets.only(right: 10),
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Color.fromARGB(255, 13, 14, 14),
+                                  width: 4,
+                                ),
+                                borderRadius: BorderRadius.circular(15),
+                                image: DecorationImage(
+                                  image:
+                                      AssetImage('lib/Assets/Images/kta.png'),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            ElevatedButton(
+                              onPressed: () {
+                                print("Button 1 Upload");
+                              },
+                              child: Text("Upload"),
+                              style: ElevatedButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  backgroundColor:
+                                      Color.fromARGB(248, 255, 255, 255),
+                                  foregroundColor:
+                                      const Color.fromARGB(255, 94, 93, 93),
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10, horizontal: 55)),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Driver's License Photo",
+                              style: GoogleFonts.balooDa2(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(248, 255, 255, 255),
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Container(
+                              width: 200,
+                              height: 95,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Color.fromARGB(255, 13, 14, 14),
+                                  width: 4,
+                                ),
+                                borderRadius: BorderRadius.circular(15),
+                                image: DecorationImage(
+                                  image:
+                                      AssetImage('lib/Assets/Images/kta.png'),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            ElevatedButton(
+                              onPressed: () {
+                                print("Button 2 upload");
+                              },
+                              child: Text("Upload"),
+                              style: ElevatedButton.styleFrom(
+                                minimumSize: Size(double.infinity, 40),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                backgroundColor:
+                                    Color.fromARGB(248, 255, 255, 255),
+                                foregroundColor:
+                                    const Color.fromARGB(255, 94, 93, 93),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 0.10,
+                    left: 25,
+                    right: 25,
+                  ),
+                  child: Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Driver's License Photo",
+                          "Selfie Photo",
                           style: GoogleFonts.balooDa2(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -123,7 +210,7 @@ class regis4 extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Container(
-                          width: double.infinity,
+                          width: 160,
                           height: 95,
                           decoration: BoxDecoration(
                             border: Border.all(
@@ -144,7 +231,7 @@ class regis4 extends StatelessWidget {
                           },
                           child: Text("Upload"),
                           style: ElevatedButton.styleFrom(
-                            minimumSize: Size(double.infinity, 40),
+                            minimumSize: Size(157, 42),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
@@ -156,111 +243,118 @@ class regis4 extends StatelessWidget {
                       ],
                     ),
                   ),
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Selfie Photo",
-                      style: GoogleFonts.balooDa2(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(248, 255, 255, 255),
-                      ),
-                    ),
-                    SizedBox(height: 10),
-                    Container(
-                      width: 160,
-                      height: 95,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Color.fromARGB(255, 13, 14, 14),
-                          width: 4,
-                        ),
-                        borderRadius: BorderRadius.circular(15),
-                        image: DecorationImage(
-                          image: AssetImage('lib/Assets/Images/kta.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 10),
-                    ElevatedButton(
-                      onPressed: () {
-                        print("Button 2 upload");
-                      },
-                      child: Text("Upload"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(157, 42),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        backgroundColor: Color.fromARGB(248, 255, 255, 255),
-                        foregroundColor: const Color.fromARGB(255, 94, 93, 93),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 8),
-              Text(
-                "National Identity Number",
-                style: GoogleFonts.balooDa2(
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(248, 255, 255, 255),
                 ),
               ),
               SizedBox(height: 8),
               Container(
-                width: 300,
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: 'Input Your National Identity Number',
-                    contentPadding: EdgeInsets.symmetric(
-                      vertical: 3,
-                      horizontal: 10,
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 0.10,
+                    left: 25,
+                    right: 25,
+                  ),
+                  child: Text(
+                    "National Identity Number",
+                    style: GoogleFonts.balooDa2(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(248, 255, 255, 255),
                     ),
                   ),
-                ),
-              ),
-              SizedBox(
-                height: 8,
-              ),
-              Text(
-                "Driver's License",
-                style: GoogleFonts.balooDa2(
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(248, 255, 255, 255),
                 ),
               ),
               SizedBox(height: 8),
               Container(
-                width: 300,
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: 'Select Drivers License id',
-                    contentPadding: EdgeInsets.symmetric(
-                      vertical: 3,
-                      horizontal: 10,
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 0.10,
+                    left: 25,
+                    right: 25,
+                  ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Input Your National Identity Number',
+                      contentPadding: EdgeInsets.symmetric(
+                        vertical: 3,
+                        horizontal: 10,
+                      ),
                     ),
                   ),
                 ),
               ),
+              SizedBox(height: 8),
+              Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 0.10,
+                    left: 25,
+                    right: 25,
+                  ),
+                  child: Text(
+                    "Driver's License",
+                    style: GoogleFonts.balooDa2(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(248, 255, 255, 255),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 8),
+              Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 0.10,
+                    left: 25,
+                    right: 25,
+                  ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Select Driver License id',
+                      contentPadding: EdgeInsets.symmetric(
+                        vertical: 3,
+                        horizontal: 10,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              // SizedBox(
+              //   height: 8,
+              // ),
+              // Text(
+              //   "Driver's License",
+              //   style: GoogleFonts.balooDa2(
+              //     fontSize: 14,
+              //     fontWeight: FontWeight.bold,
+              //     color: Color.fromARGB(248, 255, 255, 255),
+              //   ),
+              // ),
+              // SizedBox(height: 8),
+              // Container(
+              //   width: 300,
+              //   child: TextField(
+              //     decoration: InputDecoration(
+              //       border: OutlineInputBorder(),
+              //       hintText: 'Select Drivers License id',
+              //       contentPadding: EdgeInsets.symmetric(
+              //         vertical: 3,
+              //         horizontal: 10,
+              //       ),
+              //     ),
+              //   ),
+              // ),
               SizedBox(
                 height: 30,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 25.0),
+                  ),
                   ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -279,7 +373,7 @@ class regis4 extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 50,
+                    width: 147,
                   ),
                   ElevatedButton(
                     onPressed: () {

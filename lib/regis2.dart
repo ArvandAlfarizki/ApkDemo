@@ -606,19 +606,19 @@ class _Regis2PageState extends State<Regis2Page> {
     ];
 
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: Text(
-          "Register",
-          style: GoogleFonts.balooDa2(
-              fontSize: 15,
-              fontWeight: bold,
-              color: Color.fromARGB(248, 255, 255, 255)),
-        ),
-        iconTheme: IconThemeData(color: Colors.white),
-      ),
+      // extendBodyBehindAppBar: true,
+      // appBar: AppBar(
+      //   backgroundColor: Colors.transparent,
+      //   elevation: 0,
+      //   title: Text(
+      //     "Register",
+      //     style: GoogleFonts.balooDa2(
+      //         fontSize: 15,
+      //         fontWeight: bold,
+      //         color: Color.fromARGB(248, 255, 255, 255)),
+      //   ),
+      //   iconTheme: IconThemeData(color: Colors.white),
+      // ),
       body: Stack(
         children: [
           Positioned.fill(
@@ -630,8 +630,24 @@ class _Regis2PageState extends State<Regis2Page> {
           ListView(
             children: [
               Container(
+                alignment: Alignment.topLeft,
+                padding: EdgeInsets.only(top: 60.0, left: 25.0),
+                child: Row(
+                  children: [
+                    Text(
+                      "Register",
+                      style: GoogleFonts.balooDa2(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(248, 253, 253, 253),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
                 alignment: Alignment.topRight,
-                padding: EdgeInsets.only(top: 1, right: 20),
+                padding: EdgeInsets.only(top: 30, right: 25),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
@@ -659,7 +675,7 @@ class _Regis2PageState extends State<Regis2Page> {
                 child: Padding(
                   padding: const EdgeInsets.only(
                     top: 0.10,
-                    left: 10,
+                    left: 25,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -678,7 +694,7 @@ class _Regis2PageState extends State<Regis2Page> {
                       ),
                       SizedBox(height: 8),
                       Container(
-                        width: 300,
+                        width: 350,
                         child: DropdownButton<String>(
                           value: selectedCountry,
                           isExpanded: true,
@@ -717,7 +733,7 @@ class _Regis2PageState extends State<Regis2Page> {
                       ),
                       SizedBox(height: 8),
                       Container(
-                        width: 300,
+                        width: 350,
                         child: DropdownButton<String>(
                           value: selectedProvince,
                           isExpanded: true,
@@ -756,7 +772,7 @@ class _Regis2PageState extends State<Regis2Page> {
                       ),
                       SizedBox(height: 8),
                       Container(
-                        width: 300,
+                        width: 350,
                         child: DropdownButton<String>(
                           value: selectedCity,
                           isExpanded: true,
@@ -795,7 +811,7 @@ class _Regis2PageState extends State<Regis2Page> {
                       ),
                       SizedBox(height: 8),
                       Container(
-                        width: 300,
+                        width: 350,
                         child: DropdownButton<String>(
                           value: selectedOfficer,
                           isExpanded: true,
@@ -834,7 +850,7 @@ class _Regis2PageState extends State<Regis2Page> {
                       ),
                       SizedBox(height: 8),
                       Container(
-                        width: 300,
+                        width: 350,
                         child: TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
@@ -853,7 +869,7 @@ class _Regis2PageState extends State<Regis2Page> {
                       ),
                       SizedBox(height: 8),
                       Container(
-                        width: 300,
+                        width: 350,
                         child: TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
@@ -876,7 +892,7 @@ class _Regis2PageState extends State<Regis2Page> {
                       ),
                       SizedBox(height: 8),
                       Container(
-                        width: 300,
+                        width: 350,
                         child: TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
@@ -899,7 +915,7 @@ class _Regis2PageState extends State<Regis2Page> {
                       ),
                       SizedBox(height: 8),
                       Container(
-                        width: 300,
+                        width: 350,
                         child: TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
@@ -915,8 +931,11 @@ class _Regis2PageState extends State<Regis2Page> {
                         height: 20,
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
+                          Padding(
+                            padding: EdgeInsets.only(left: 2.0),
+                          ),
                           ElevatedButton(
                             onPressed: () {
                               Navigator.push(
@@ -937,7 +956,7 @@ class _Regis2PageState extends State<Regis2Page> {
                             ),
                           ),
                           SizedBox(
-                            width: 50,
+                            width: 147,
                           ),
                           ElevatedButton(
                             onPressed: () {

@@ -34,7 +34,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 100),
             Text(
               "Email or Username",
               style: GoogleFonts.balooDa2(
@@ -45,7 +45,7 @@ class LoginPage extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Container(
-              width: 300,
+              width: 350,
               child: TextField(
                 decoration: InputDecoration(
                   fillColor: Color.fromARGB(248, 253, 253, 253),
@@ -70,7 +70,7 @@ class LoginPage extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Container(
-              width: 300,
+              width: 350,
               child: TextField(
                 obscureText: true,
                 decoration: InputDecoration(
@@ -89,7 +89,7 @@ class LoginPage extends StatelessWidget {
               height: 30,
             ),
             Container(
-              width: 300,
+              width: 350,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(context,
@@ -125,7 +125,7 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 200,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

@@ -46,6 +46,23 @@ class TransactionScreen extends State<TransactionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        automaticallyImplyLeading: false,
+        // elevation: 0,
+        title: Padding(
+          padding: const EdgeInsets.only(left: 25.0),
+          child: Text(
+            "Transaction",
+            style: GoogleFonts.balooDa2(
+                fontSize: 17,
+                // fontWeight: bold,
+                color: Color.fromARGB(248, 255, 255, 255)),
+          ),
+        ),
+        // iconTheme: IconThemeData(color: Colors.white),
+      ),
       backgroundColor: const Color.fromARGB(238, 0, 0, 0),
       body: Center(
           child: Text("Transaction", style: TextStyle(color: Colors.white))),
