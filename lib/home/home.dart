@@ -1,3 +1,14 @@
+import 'dart:developer';
+
+import 'package:apkdemo/home/categorize/apparel.dart';
+import 'package:apkdemo/home/categorize/flights.dart';
+import 'package:apkdemo/home/categorize/hotel.dart';
+import 'package:apkdemo/home/categorize/more.dart';
+import 'package:apkdemo/home/categorize/otomotif.dart';
+import 'package:apkdemo/home/categorize/resort.dart';
+import 'package:apkdemo/home/categorize/service.dart';
+import 'package:apkdemo/home/categorize/trains%20copy.dart';
+import 'package:apkdemo/home/categorize/trains.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -186,68 +197,142 @@ class HomeScreen extends State<HomePage> {
                         children: [
                           Row(
                             children: [
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset('lib/Assets/Images/Apparel.png',
-                                      width: 55, height: 55),
-                                  SizedBox(height: 5),
-                                  Text('Apparel',
-                                      style: GoogleFonts.balooDa2(
-                                          fontSize: 15, color: Colors.white))
-                                ],
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Apparel()),
+                                  );
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset('lib/Assets/Images/Apparel.png',
+                                        width: 55, height: 55),
+                                    SizedBox(height: 5),
+                                    Text('Apparel',
+                                        style: GoogleFonts.balooDa2(
+                                            fontSize: 15, color: Colors.white)),
+                                  ],
+                                ),
                               ),
                               SizedBox(width: 15),
                               Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Image.asset(
-                                        'lib/Assets/Images/Otomotif_w.png',
-                                        width: 55,
-                                        height: 55),
-                                    SizedBox(height: 5),
-                                    Text('Otomotif',
-                                        style: GoogleFonts.balooDa2(
-                                            fontSize: 15, color: Colors.white))
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Otomotif()),
+                                        );
+                                      },
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset(
+                                              'lib/Assets/Images/Otomotif_w.png',
+                                              width: 55,
+                                              height: 55),
+                                          SizedBox(height: 5),
+                                          Text('Otomotif',
+                                              style: GoogleFonts.balooDa2(
+                                                  fontSize: 15,
+                                                  color: Colors.white)),
+                                        ],
+                                      ),
+                                    ),
                                   ]),
                               SizedBox(width: 15),
                               Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Image.asset(
-                                        'lib/Assets/Images/Service_w.png',
-                                        width: 55,
-                                        height: 55),
-                                    SizedBox(height: 5),
-                                    Text('Service',
-                                        style: GoogleFonts.balooDa2(
-                                            fontSize: 15, color: Colors.white))
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  ServicePage()),
+                                        );
+                                      },
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset(
+                                              'lib/Assets/Images/Service_w.png',
+                                              width: 55,
+                                              height: 55),
+                                          SizedBox(height: 5),
+                                          Text('Service',
+                                              style: GoogleFonts.balooDa2(
+                                                  fontSize: 15,
+                                                  color: Colors.white)),
+                                        ],
+                                      ),
+                                    ),
                                   ]),
                               SizedBox(width: 15),
                               Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Image.asset(
-                                        'lib/Assets/Images/Trains_w.png',
-                                        width: 55,
-                                        height: 55),
-                                    SizedBox(height: 5),
-                                    Text('Trains',
-                                        style: GoogleFonts.balooDa2(
-                                            fontSize: 15, color: Colors.white))
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Trains()),
+                                        );
+                                      },
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset(
+                                              'lib/Assets/Images/Trains_w.png',
+                                              width: 55,
+                                              height: 55),
+                                          SizedBox(height: 5),
+                                          Text('Trains',
+                                              style: GoogleFonts.balooDa2(
+                                                  fontSize: 15,
+                                                  color: Colors.white)),
+                                        ],
+                                      ),
+                                    ),
                                   ]),
                               SizedBox(width: 15),
                               Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Image.asset(
-                                        'lib/Assets/Images/Flights_w.png',
-                                        width: 55,
-                                        height: 55),
-                                    SizedBox(height: 5),
-                                    Text('Flights',
-                                        style: GoogleFonts.balooDa2(
-                                            fontSize: 15, color: Colors.white))
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Flights()),
+                                        );
+                                      },
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset(
+                                              'lib/Assets/Images/Flights_w.png',
+                                              width: 55,
+                                              height: 55),
+                                          SizedBox(height: 5),
+                                          Text('Flights',
+                                              style: GoogleFonts.balooDa2(
+                                                  fontSize: 15,
+                                                  color: Colors.white)),
+                                        ],
+                                      ),
+                                    ),
                                   ]),
                             ],
                           )
@@ -265,48 +350,118 @@ class HomeScreen extends State<HomePage> {
                               Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Image.asset('lib/Assets/Images/Villa_w.png',
-                                        width: 55, height: 55),
-                                    SizedBox(height: 5),
-                                    Text('Villa',
-                                        style: GoogleFonts.balooDa2(
-                                            fontSize: 15, color: Colors.white))
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Villa()),
+                                        );
+                                      },
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset(
+                                              'lib/Assets/Images/Villa_w.png',
+                                              width: 55,
+                                              height: 55),
+                                          SizedBox(height: 5),
+                                          Text('Villa',
+                                              style: GoogleFonts.balooDa2(
+                                                  fontSize: 15,
+                                                  color: Colors.white)),
+                                        ],
+                                      ),
+                                    ),
                                   ]),
                               SizedBox(width: 15),
                               Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Image.asset(
-                                        'lib/Assets/Images/Resort_w.png',
-                                        width: 55,
-                                        height: 55),
-                                    SizedBox(height: 5),
-                                    Text('Resort',
-                                        style: GoogleFonts.balooDa2(
-                                            fontSize: 15, color: Colors.white))
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Resort()),
+                                        );
+                                      },
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset(
+                                              'lib/Assets/Images/Resort_w.png',
+                                              width: 55,
+                                              height: 55),
+                                          SizedBox(height: 5),
+                                          Text('Resort',
+                                              style: GoogleFonts.balooDa2(
+                                                  fontSize: 15,
+                                                  color: Colors.white)),
+                                        ],
+                                      ),
+                                    ),
                                   ]),
                               SizedBox(width: 15),
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Image.asset('lib/Assets/Images/Hotel_w.png',
-                                      width: 55, height: 55),
-                                  SizedBox(height: 5),
-                                  Text('Hotel',
-                                      style: GoogleFonts.balooDa2(
-                                          fontSize: 15, color: Colors.white))
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Hotel()),
+                                      );
+                                    },
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Image.asset(
+                                            'lib/Assets/Images/Hotel_w.png',
+                                            width: 55,
+                                            height: 55),
+                                        SizedBox(height: 5),
+                                        Text('Hotel',
+                                            style: GoogleFonts.balooDa2(
+                                                fontSize: 15,
+                                                color: Colors.white)),
+                                      ],
+                                    ),
+                                  ),
                                 ],
                               ),
                               SizedBox(width: 15),
                               Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Image.asset('lib/Assets/Images/More_w.png',
-                                        width: 55, height: 55),
-                                    SizedBox(height: 5),
-                                    Text('More',
-                                        style: GoogleFonts.balooDa2(
-                                            fontSize: 15, color: Colors.white))
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => More()),
+                                        );
+                                      },
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset(
+                                              'lib/Assets/Images/More_w.png',
+                                              width: 55,
+                                              height: 55),
+                                          SizedBox(height: 5),
+                                          Text('More',
+                                              style: GoogleFonts.balooDa2(
+                                                  fontSize: 15,
+                                                  color: Colors.white)),
+                                        ],
+                                      ),
+                                    ),
                                   ])
                             ],
                           )
