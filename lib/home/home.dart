@@ -9,6 +9,8 @@ import 'package:apkdemo/home/categorize/resort.dart';
 import 'package:apkdemo/home/categorize/service.dart';
 import 'package:apkdemo/home/categorize/trains%20copy.dart';
 import 'package:apkdemo/home/categorize/trains.dart';
+import 'package:apkdemo/home/organized/event.dart';
+import 'package:apkdemo/home/organized/news.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -147,19 +149,39 @@ class HomeScreen extends State<HomePage> {
                         children: [
                           Row(
                             children: [
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset('lib/Assets/Images/News_w.png',
-                                      width: 55, height: 55),
-                                  SizedBox(height: 5),
-                                  Text('News',
-                                      style: GoogleFonts.balooDa2(
-                                          fontSize: 15, color: Colors.white))
-                                ],
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => News()),
+                                  );
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset('lib/Assets/Images/News_w.png',
+                                        width: 55, height: 55),
+                                    SizedBox(height: 5),
+                                    Text('News',
+                                        style: GoogleFonts.balooDa2(
+                                            fontSize: 15, color: Colors.white)),
+                                  ],
+                                ),
                               ),
                               SizedBox(width: 15),
                               Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Event()),
+                                  );
+                                },
+                                child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Image.asset('lib/Assets/Images/Event_w.png',
@@ -167,7 +189,10 @@ class HomeScreen extends State<HomePage> {
                                     SizedBox(height: 5),
                                     Text('Event',
                                         style: GoogleFonts.balooDa2(
-                                            fontSize: 15, color: Colors.white))
+                                            fontSize: 15, color: Colors.white)),
+                                  ],
+                                ),
+                              ),
                                   ])
                             ],
                           )
