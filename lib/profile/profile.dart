@@ -1,5 +1,12 @@
 import 'package:apkdemo/home/home.dart';
+import 'package:apkdemo/profile/Menu/contactus.dart';
+import 'package:apkdemo/profile/Menu/datapolicy.dart';
+import 'package:apkdemo/profile/Menu/deleteaccount.dart';
+import 'package:apkdemo/profile/Menu/organizationfee.dart';
+import 'package:apkdemo/profile/Menu/notification.dart';
 import 'package:apkdemo/login/LoginScreen.dart';
+import 'package:apkdemo/profile/Menu/rateus.dart';
+import 'package:apkdemo/profile/Menu/term.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart'; // Tambahkan import provider
@@ -197,7 +204,8 @@ class ProfileScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(
+                            builder: (context) => Organizationfee()),
                       );
                     },
                     style: TextButton.styleFrom(
@@ -248,7 +256,8 @@ class ProfileScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(
+                            builder: (context) => NotificationPage()),
                       );
                     },
                     style: TextButton.styleFrom(
@@ -289,7 +298,7 @@ class ProfileScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(builder: (context) => Rateus()),
                       );
                     },
                     style: TextButton.styleFrom(
@@ -330,7 +339,7 @@ class ProfileScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(builder: (context) => Term()),
                       );
                     },
                     style: TextButton.styleFrom(
@@ -371,7 +380,7 @@ class ProfileScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(builder: (context) => Datapolicy()),
                       );
                     },
                     style: TextButton.styleFrom(
@@ -412,7 +421,7 @@ class ProfileScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(builder: (context) => Contactus()),
                       );
                     },
                     style: TextButton.styleFrom(
@@ -494,7 +503,8 @@ class ProfileScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(
+                            builder: (context) => Deleteaccount()),
                       );
                     },
                     style: TextButton.styleFrom(
