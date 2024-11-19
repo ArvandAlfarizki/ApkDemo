@@ -174,25 +174,29 @@ class HomeScreen extends State<HomePage> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Event()),
-                                  );
-                                },
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image.asset('lib/Assets/Images/Event_w.png',
-                                        width: 55, height: 55),
-                                    SizedBox(height: 5),
-                                    Text('Event',
-                                        style: GoogleFonts.balooDa2(
-                                            fontSize: 15, color: Colors.white)),
-                                  ],
-                                ),
-                              ),
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Event()),
+                                        );
+                                      },
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset(
+                                              'lib/Assets/Images/Event_w.png',
+                                              width: 55,
+                                              height: 55),
+                                          SizedBox(height: 5),
+                                          Text('Event',
+                                              style: GoogleFonts.balooDa2(
+                                                  fontSize: 15,
+                                                  color: Colors.white)),
+                                        ],
+                                      ),
+                                    ),
                                   ])
                             ],
                           )
@@ -510,7 +514,7 @@ class HomeScreen extends State<HomePage> {
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white)),
                                   ]),
-                              SizedBox(width: 190),
+                              SizedBox(width: 150),
                               Column(
                                 children: [
                                   ElevatedButton(
